@@ -51,12 +51,12 @@ class SleepTest extends React.Component {
     // Submit form via jQuery/AJAX
     $.ajax({
       type: 'POST',
-      data: {
+      data: JSON.stringify({
         "know": responseYes,
         "word": currentCard.word,
-      },
+      }),
       url: '/quiz/reply',
-      contentType:"application/json"
+      contentType: 'application/json'
     });
   }
 
